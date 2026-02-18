@@ -1,130 +1,94 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-   //Date function
-   $('#date').text(new Date().getFullYear());
+  // Set footer year dynamically
+  $('#date').text(new Date().getFullYear());
 
-   var items = new Array();
-   storeid();
-   console.log(items);
+  // Collect all project row IDs
+  var items = [];
+  storeid();
 
-   //Set images
-   setImgs();
-   
+  // Create audio element programmatically
+  var pop = new Audio('sounds/smallPop.wav');
+  pop.preload = 'auto';
 
-   for(var i = 0; i < items.length; i++){
-      myClick(items[i]);
-   }
+  // Track scroll position before opening a modal
+  var scrollPositionBeforeModal = 0;
 
-   //Find all the rows and get their ids
-   function storeid(){
-      var className = document.getElementsByClassName('row');
-      var classnameCount = className.length;
-      for(var j = 0; j < classnameCount; j++){
-          items.push(className[j].id);
+  // Initialize modals
+  items.forEach(function (id) {
+    initModal(id);
+  });
+
+  // Handle browser back/forward navigation
+  $(window).on('popstate', function () {
+    items.forEach(function (id) {
+      $('#modal-' + id).fadeOut('fast');
+      stopVideo(id);
+    });
+    $('body').removeClass('my-body-noscroll-class');
+    $(document).scrollTop(scrollPositionBeforeModal);
+  });
+
+  // ----------------------------
+  // Helper: collect row IDs
+  // ----------------------------
+  function storeid() {
+    $('.row').each(function () {
+      if (this.id) {
+        items.push(this.id);
       }
-   }
+    });
+  }
 
-   //Find all the lazy images and set the data-src
-   function setImgs(){
-      var lazyName = document.getElementsByClassName('lazy');
-      var lazyCount = lazyName.length;
-      for (var k = 0; k < lazyCount; k++) {
-         // Replace the src with data-src for lazy loading
-         var element = $(lazyName[k]);
-         var src = element.attr('src');
-         element.attr('data-src', src);
-         element.removeAttr('src');
-       }
-   }
+  // ----------------------------
+  // Helper: stop an iframe video by resetting its src
+  // ----------------------------
+  function stopVideo(id) {
+    var $video = $('#video-' + id);
+    if ($video.length) {
+      $video.attr('src', $video.attr('src'));
+    }
+  }
 
-    //Sound
-    var pop = $("#pop")[0];
+  // ----------------------------
+  // Helper: close a specific modal
+  // ----------------------------
+  function closeModal(id) {
+    $('#modal-' + id).fadeOut('fast');
+    $('body').removeClass('my-body-noscroll-class');
+    stopVideo(id);
+    if (pop) pop.play();
+    window.history.go(-1);
+    $(document).scrollTop(scrollPositionBeforeModal);
+  }
 
-    $(window).on('popstate', function() {
-      // Handle the URL change
-      
-         items.forEach(function(clicker) {
-            $('#modal-' + clicker).fadeOut('fast');
-            $('body').removeClass('my-body-noscroll-class');
-            $(document).scrollTop(el);
-            $('#video-' + clicker).attr('src', $('#video-' + clicker).attr('src'));
-            $('#video-' + clicker).css('display', 'block');
-          });
-      
+  // ----------------------------
+  // Set up open/close for one modal
+  // ----------------------------
+  function initModal(id) {
+    $('#modal-' + id).css('display', 'none');
+
+    // Open
+    $('#' + id + '-cta').on('click', function () {
+      scrollPositionBeforeModal = $(document).scrollTop();
+      $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
+      $('body').addClass('my-body-noscroll-class');
+      if (pop) pop.play();
+      window.history.pushState({}, '', '/portfolio/#modal-' + id);
+      return false;
     });
 
-    var el = $(document).scrollTop();
+    // Close (top button)
+    $('#' + id + '-exit').on('click', function () {
+      closeModal(id);
+      return false;
+    });
 
-    function myClick(clicker){
-      $('#modal-'+clicker).css('display', 'none');
-      //Hide modals
-
-      $('#'+clicker+'-cta').click(function(){
-         $('#modal-'+clicker).css('z-index', '1000');
-         $('#modal-'+clicker).fadeIn('fast');
-         $('#modal-'+clicker).scrollTop(0);
-         $('body').addClass('my-body-noscroll-class');
-         pop.play();
-         window.history.pushState({}, '', '/portfolio/#modal-'+clicker);
-         el = $(document).scrollTop();
-         return false;
-      });//See More
-
-      $('#'+clicker+'-exit').click(function(){
-         $('#modal-'+clicker).fadeOut('fast');
-         $('body').removeClass('my-body-noscroll-class');
-         $('#video-'+clicker).attr('src', $('#video-'+clicker).attr('src'));
-         $('#video-'+clicker).css('display', 'block');
-         pop.play();
-         window.history.go(-1);
-         $(document).scrollTop(el);
-         return false;
-      });//Close Top
-
-      $('#'+clicker+'-exit-bottom').click(function(){
-         $('#modal-'+clicker).fadeOut('fast');
-         $('body').removeClass('my-body-noscroll-class');
-         $('#video-'+clicker).attr('src', $('#video-'+clicker).attr('src'));
-         $('#video-'+clicker).css('display', 'block');
-         pop.play();
-         window.history.go(-1);
-         $(document).scrollTop(el);
-         return false;
-      });//Close Bottom
-
-    }//myClick
-
-
-    // Function to check if an element is in the viewport
-    function isElementInViewport(element) {
-      var rect = element.getBoundingClientRect();
-      var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-      var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-      var boundary = 100; // Adjust the boundary value as per your requirements
-    
-      return (
-        rect.top >= -boundary &&
-        rect.left >= -boundary &&
-        rect.bottom <= viewportHeight + boundary &&
-        rect.right <= viewportWidth + boundary
-      );
-    }
-
-   // Function to lazy load the images
-   function lazyLoadImages() {
-      $(".lazy").each(function() {
-      if (isElementInViewport(this)) {
-         // Replace the data-src attribute with the src attribute to trigger the image load
-         $(this).attr("src", $(this).data("src"));
-         $(this).removeClass("lazy");
-      }
-      });
-   }
-
-   // Attach scroll event listener to trigger lazy loading on scroll
-   $(window).on("scroll", lazyLoadImages);
-
-   // Trigger initial lazy loading on page load
-   lazyLoadImages();
+    // Close (bottom button)
+    $('#' + id + '-exit-bottom').on('click', function () {
+      closeModal(id);
+      return false;
+    });
+  }
 
 });//doc ready
