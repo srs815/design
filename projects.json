@@ -2,7 +2,7 @@
   {
     "id": "aiVideo",
     "title": "AI Video Generator",
-    "description": "AI Video Generator is a Python Flask app that lets anyone create online course trailers without traditional production experience. It uses <a href=\"https://elevenlabs.io/\" title=\"ElevenLabs\" target=\"_blank\">ElevenLabs</a> for narration, AI-generated visuals from <a href=\"https://openai.com/sora/\" title=\"SORA\" target=\"_blank\">SORA</a>, and background music to streamline video creation.",
+    "description": "AI Video Generator is a Python Flask app that lets anyone create online course trailers without traditional production experience. It uses <a href=\"https://elevenlabs.io/\" title=\"ElevenLabs\" target=\"_blank\">ElevenLabs API</a> for narration, AI-generated visuals from <a href=\"https://openai.com/sora/\" title=\"SORA\" target=\"_blank\">SORA</a>, and background music to streamline video creation.",
     "thumbnail": { "src": "images/videoTool.jpeg", "loading": "eager" },
     "modalImages": [
       { "src": "images/modal/videoTool-1.jpeg", "loading": "eager", "alt": "AI Video Generator" }
