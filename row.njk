@@ -1,0 +1,10 @@
+<div class="row wrapper" id="{{ project.id }}">
+  <div class="text">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description | safe }}</p>
+    <p><a href="#modal-{{ project.id }}" title="See More" class="row-cta" id="{{ project.id }}-cta"><span>See More</span> <i class="fa fa-angle-right"></i></a></p>
+  </div>
+  <div>
+    <img loading="{{ project.thumbnail.loading }}" src="{{ project.thumbnail.src }}" title="{{ project.title }}" alt="{{ project.title }}" />
+  </div>
+</div>

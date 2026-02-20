@@ -1,0 +1,22 @@
+<div id="modal-{{ project.id }}" class="modal" body-scroll-lock-ignore="">
+  <a href="#{{ project.id }}" title="Exit" class="modal-exit" id="{{ project.id }}-exit">Close <i class="fa fa-times"></i></a>
+  <div class="wrapper">
+    {% for image in project.modalImages %}
+      {% if image.caption %}
+        <p class="modal-paragraph">{{ image.caption }}</p>
+      {% endif %}
+      <img loading="{{ image.loading }}" src="{{ image.src }}" title="{{ project.title }}" alt="{{ image.alt }}"{% if image.class %} class="{{ image.class }}"{% endif %} />
+    {% endfor %}
+    {% if project.videoId %}
+      <div class="wrap-iframe">
+        <iframe loading="lazy" id="video-{{ project.id }}" src="https://www.youtube.com/embed/{{ project.videoId }}" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+  </div><!--wrapper-->
+  <div class="process">
+    <p>Would you like to learn about my process?</p>
+    <a href="mailto:stevenraysimon@gmail.com" class="process-cta" title="Contact Me">Contact Me</a>
+    <a href="#{{ project.id }}" title="Exit" class="modal-exit-bottom" id="{{ project.id }}-exit-bottom">Close</a>
+  </div><!--process-->
+</div>

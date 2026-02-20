@@ -1,0 +1,193 @@
+[
+  {
+    "id": "aiVideo",
+    "title": "AI Video Generator",
+    "description": "AI Video Generator is a Python Flask app that lets anyone create online course trailers without traditional production experience. It uses <a href=\"https://elevenlabs.io/\" title=\"ElevenLabs\" target=\"_blank\">ElevenLabs</a> for narration, AI-generated visuals from <a href=\"https://openai.com/sora/\" title=\"SORA\" target=\"_blank\">SORA</a>, and background music to streamline video creation.",
+    "thumbnail": { "src": "images/videoTool.jpeg", "loading": "eager" },
+    "modalImages": [
+      { "src": "images/modal/videoTool-1.jpeg", "loading": "eager", "alt": "AI Video Generator" }
+    ],
+    "videoId": "RBOh6g9Qtp0?si=ggPncBIBDxIAZGsU"
+  },
+  {
+    "id": "ag",
+    "title": "Wiley Agnostic Lander",
+    "description": "What makes a web form user-friendly? Clear visibility, conciseness, credibility, and incentives are key factors. After conducting user research on web forms, I designed and developed an agnostic landing page and web form with the goal of boosting conversion rate.",
+    "thumbnail": { "src": "images/ag.jpg", "loading": "eager" },
+    "modalImages": [
+      { "src": "images/modal/ag-1.jpg", "loading": "eager", "alt": "Agnostic Lander" },
+      { "src": "images/modal/ag-2.jpg", "loading": "lazy", "alt": "Agnostic Lander" }
+    ]
+  },
+  {
+    "id": "charts",
+    "title": "Chart.js Gutenberg Block",
+    "description": "I noticed that the graphs on Wiley's <a href=\"https://wordpress.org/\" target=\"_blank\" title=\"WordPress\">WordPress</a> websites were not interactive, so I took it upon myself to develop a <a href=\"https://wordpress.org/support/article/blocks/\" title=\"Gutenberg Block\" target=\"_blank\">Gutenberg Block</a> that utilizes the <a href=\"https://www.chartjs.org/\" target=\"_blank\" title=\"chart.js\">chart.js</a> library, allowing for the creation of interactive graphs.",
+    "thumbnail": { "src": "images/charts.jpg", "loading": "eager" },
+    "modalImages": [
+      { "src": "images/modal/charts-1.jpg", "loading": "eager", "alt": "Chart.js Blocks" }
+    ],
+    "videoId": "7cK_5oInexI"
+  },
+  {
+    "id": "swd",
+    "title": "Social Work Degrees Redesign",
+    "description": "At <a href=\"https://www.wiley.com/\" title=\"Wiley\" target=\"_blank\">Wiley</a>, I enhance the user experience of degree program websites. For example, I rebranded <a href=\"https://www.socialworkdegrees.org/\" title=\"Social Work Degrees\" target=\"_blank\">socialworkdegrees.org</a> to improve conversion, engagement, and SEO. This rebrand included a new logo, updated web design, additional features, and custom <a href=\"https://wordpress.org/support/article/blocks/\" title=\"Gutenberg Blocks\" target=\"_blank\">Gutenberg Blocks</a>.",
+    "thumbnail": { "src": "images/swd.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/swd-1.jpg", "loading": "eager", "alt": "Social Work Degrees" },
+      { "src": "images/modal/swd-2.jpg", "loading": "lazy", "alt": "Social Work Degrees" },
+      { "src": "images/modal/swd-3.jpg", "loading": "lazy", "alt": "Social Work Degrees" }
+    ],
+    "videoId": "DfTtSannXrs"
+  },
+  {
+    "id": "wileyEngage",
+    "title": "Wiley Engage",
+    "description": "Wiley Engage is an internal Learning Management System at <a href=\"https://www.wiley.com/\" title=\"Wiley\" target=\"_blank\">Wiley</a>. Shown is a <a href=\"https://wordpress.org/\" target=\"_blank\" title=\"WordPress\">WordPress</a> theme to market Wiley Engage that I designed and developed (2022). For this custom theme, I included search functionality and three custom <a href=\"https://wordpress.org/support/article/blocks/\" title=\"Gutenberg Blocks\" target=\"_blank\">Gutenberg Blocks</a> built with <a href=\"https://reactjs.org/\" title=\"React\" target=\"_blank\">React</a>.",
+    "thumbnail": { "src": "images/engage.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/engage-1.jpg", "loading": "eager", "alt": "Wiley Engage" },
+      { "src": "images/modal/engage-2.jpg", "loading": "lazy", "alt": "Wiley Engage" }
+    ],
+    "videoId": "O3H8-WiuRBE"
+  },
+  {
+    "id": "cultureApp",
+    "title": "Preserving and Strengthening Our Culture",
+    "description": "As employees began working from home during the COVID-19 pandemic, <a href=\"https://www.discounttire.com/\" title=\"Discount Tire\" target=\"_blank\">Discount Tire</a> needed a way to share its culture with newly hired remote employees. I created a <a href=\"https://reactjs.org/\" title=\"React\" target=\"_blank\">React</a> app for Discount Tire to give new remote employees a virtual tour of the company's history, values, departments, and plans.",
+    "thumbnail": { "src": "images/psc.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/psc-1.jpg", "loading": "eager", "alt": "Preserving and Strengthening Our Culture" },
+      { "src": "images/modal/psc-2.jpg", "loading": "lazy", "alt": "Preserving and Strengthening Our Culture" },
+      { "src": "images/modal/psc-3.jpg", "loading": "lazy", "alt": "Preserving and Strengthening Our Culture" },
+      { "src": "images/modal/psc-4.jpg", "loading": "lazy", "alt": "Preserving and Strengthening Our Culture" }
+    ],
+    "videoId": "TrUcsHV4EhI"
+  },
+  {
+    "id": "guideCustomer",
+    "title": "Guide That Customer Game",
+    "description": "During the COVID-19 pandemic, <a href=\"https://www.discounttire.com/\" title=\"Discount Tire\" target=\"_blank\">Discount Tire</a> let customers drive their own vehicles to reduce exposure to the virus. I created a game using <a href=\"https://molleindustria.github.io/p5.play/\" title=\"p5.play\" target=\"_blank\">p5.play</a> within the <a href=\"https://www.adaptlearning.org/index.html\" title=\"Adapt eLearning framework\" target=\"_blank\">Adapt eLearning framework</a> to teach proper hand signals for guiding customers in and out of the bays.",
+    "thumbnail": { "src": "images/guideCustomer.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/guideCustomer-1.jpg", "loading": "eager", "alt": "Guide That Customer Game" },
+      { "src": "images/modal/guideCustomer-2.jpg", "loading": "lazy", "alt": "Guide That Customer Game" },
+      { "src": "images/modal/guideCustomer-3.jpg", "loading": "lazy", "alt": "Guide That Customer Game" },
+      { "src": "images/modal/guideCustomer-4.jpg", "loading": "lazy", "alt": "Guide That Customer Game" }
+    ],
+    "videoId": "cKN4VpkiAxs"
+  },
+  {
+    "id": "storyApp",
+    "title": "Sales Career Path",
+    "description": "The Sales Career Path is a series of single page applications that I illustrated and developed with <a href=\"https://vuejs.org/\" title=\"Vue\" target=\"_blank\">Vue</a> that teach employees at <a href=\"https://www.discounttire.com/\" title=\"Discount Tire\" target=\"_blank\">Discount Tire</a> the steps necessary to move into a management position.",
+    "thumbnail": { "src": "images/storyApp.png", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/storyApp-1.png", "loading": "eager", "alt": "Sales Career Path" },
+      { "src": "images/modal/storyApp-2.png", "loading": "lazy", "alt": "Sales Career Path" },
+      { "src": "images/modal/storyApp-4.png", "loading": "lazy", "alt": "Sales Career Path" },
+      { "src": "images/modal/storyApp-3.png", "loading": "lazy", "alt": "Sales Career Path" }
+    ],
+    "videoId": "P27Yl768rYA"
+  },
+  {
+    "id": "bannerTool",
+    "title": "Banner Tool",
+    "description": "Because <a href=\"https://www.discounttire.com/\" title=\"Discount Tire\" target=\"_blank\">Discount Tire</a> often needs banners for their intranet, I decided to develop a banner tool so that anyone on our team could make banners without a developer.",
+    "thumbnail": { "src": "images/bannerTool.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/bannerTool-1.jpg", "loading": "eager", "alt": "Banner Tool" }
+    ],
+    "videoId": "nZyoANqVfBA"
+  },
+  {
+    "id": "shoeboxChallenge",
+    "title": "Shoebox Challenge",
+    "description": "The <a href=\"https://www.shoeboxchallenge.com\" title=\"Shoebox Challenge\" target=\"_blank\">Shoebox Challenge</a> began in 2011 when <a href=\"https://www.samaritanspurse.org/\" title=\"Samaritan's Purse\" target=\"_blank\">Samaritan's Purse</a> and <a href=\"http://www.hfecorp.com/\" title=\"Herschend Family Entertainment\" target=\"_blank\">Herschend Family Entertainment</a> partnered with the goal to collect shoeboxes for <a href=\"https://www.samaritanspurse.org/what-we-do/operation-christmas-child\" target=\"_blank\" title=\"Operation Christmas Child\">Operation Christmas Child</a>. This is the new website (2019) that I designed and developed in <a href=\"https://wordpress.org/\" target=\"_blank\" title=\"WordPress\">WordPress</a>.",
+    "thumbnail": { "src": "images/sc.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/sc-1.jpg", "loading": "eager", "alt": "Shoebox Challenge" },
+      { "src": "images/modal/sc-2.jpg", "loading": "lazy", "alt": "Shoebox Challenge" },
+      { "src": "images/modal/sc-3.jpg", "loading": "lazy", "alt": "Shoebox Challenge", "class": "follow-text", "caption": "Each step's call-to-action (below) programmatically opens and closes based on the date and time." },
+      { "src": "images/modal/sc-4.jpg", "loading": "lazy", "alt": "Shoebox Challenge" }
+    ]
+  },
+  {
+    "id": "lwl",
+    "title": "Leading With Love",
+    "description": "<a href=\"https://lwl.herschenduniversity.com\" title=\"Leading With Love\" target=\"_blank\">Leading With Love</a> is a <a href=\"https://wordpress.org/\" target=\"_blank\" title=\"WordPress\">WordPress</a> website designed and developed to help employees at <a href=\"https://www.hfecorp.com/\" title=\"Herschend Family Entertainment\" target=\"_blank\">Herschend Family Entertainment</a> learn how to lead and manage in a loving way.",
+    "thumbnail": { "src": "images/lwl.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/lwl-1.jpg", "loading": "eager", "alt": "Leading With Love" },
+      { "src": "images/modal/lwl-2.jpg", "loading": "lazy", "alt": "Leading With Love" },
+      { "src": "images/modal/lwl-3.jpg", "loading": "lazy", "alt": "Leading With Love" }
+    ]
+  },
+  {
+    "id": "wwg",
+    "title": "Wildwood Grove Interactive Tour",
+    "description": "This interactive map made with <a href=\"https://p5js.org\" title=\"p5.js\" target=\"_blank\">p5.js</a> leads you on a guided tour of the <a href=\"https://www.dollywood.com/\" title=\"Dollywood\" target=\"_blank\">Dollywood</a> theme park's new Wildwood Grove area.",
+    "thumbnail": { "src": "images/wwg.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/wwg-1.png", "loading": "eager", "alt": "Explore" },
+      { "src": "images/modal/wwg-2.png", "loading": "lazy", "alt": "Great Tree Swing" },
+      { "src": "images/modal/wwg-3.png", "loading": "lazy", "alt": "Wildwood Tree" }
+    ],
+    "videoId": "DbuaOaAOBZY"
+  },
+  {
+    "id": "appyBirthday",
+    "title": "Appy Birthday",
+    "description": "One of the projects that I worked on while at <a href=\"https://www.geico.com/\" title=\"GEICO\" target=\"_blank\">GEICO</a> was the branding for the <a href=\"https://www.geico.com/\" title=\"GEICO\" target=\"_blank\">GEICO</a> mobile app's eighth birthday. The branding included a website, a large banner to hang in the office, a poster, and an email to send out to customers.",
+    "thumbnail": { "src": "images/appyBirthday.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/appy-1.jpg", "loading": "eager", "alt": "Appy Birthday" },
+      { "src": "images/modal/appy-2.jpg", "loading": "lazy", "alt": "Appy Birthday" }
+    ]
+  },
+  {
+    "id": "geicoIT",
+    "title": "GEICO IT",
+    "description": "This is an infographic that I illustrated to show the excitement of being a GEICO IT associate. It is exciting to know that <a href=\"https://www.geico.com/\" title=\"GEICO\" target=\"_blank\">GEICO</a> is reimagining how the future of insurance will work.",
+    "thumbnail": { "src": "images/geicoIT.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/itPoster.jpg", "loading": "eager", "alt": "GEICO IT" }
+    ]
+  },
+  {
+    "id": "shakeasound",
+    "title": "Shake a Sound",
+    "description": "Shake a Sound is a mobile web app designed for the Brooklyn Academy of Music's <a href=\"https://www.bam.org/teknopolis\" title=\"Teknopolis\" target=\"_blank\">Teknopolis</a>. The app establishes a connection between devices using web sockets and lets each person play music, in contribution with everyone else, by shaking their phone.",
+    "thumbnail": { "src": "images/shakeasound.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/sas-1.jpg", "loading": "eager", "alt": "Shake a Sound" },
+      { "src": "images/modal/sas-2.jpg", "loading": "lazy", "alt": "Shake a Sound" }
+    ],
+    "videoId": "uJx7xF9PFJw?rel=0"
+  },
+  {
+    "id": "bopit",
+    "title": "Bop It Keyboard",
+    "description": "<a href=\"https://stevenraysimon.github.io/bopit/\" target=\"_blank\" title=\"Bop It Keyboard\">Bop It Keyboard</a> is a fast-paced typing game designed to build keyboarding skills. Inspired by the classic Bop It toy, players must quickly type on-screen prompts before time runs out. Built with desktop and mobile in mind, it features an on-screen keyboard for accessibility and touch interaction.",
+    "thumbnail": { "src": "images/bopit.jpg", "loading": "eager" },
+    "modalImages": [
+      { "src": "images/modal/bopit-1.jpg", "loading": "eager", "alt": "Bop It Keyboard" },
+      { "src": "images/modal/bopit-2.jpg", "loading": "lazy", "alt": "Bop It Keyboard" }
+    ],
+    "videoId": "Jw97XL8F6_0?si=jPusby579Ftmhqp_"
+  },
+  {
+    "id": "kodi",
+    "title": "Kodi Learns to Cook",
+    "description": "Kodi Learns to Cook is an interactive storybook for children made with <a href=\"https://p5js.org\" title=\"p5.js\" target=\"_blank\">p5.js</a>. This book uses games, animation, and music to introduce cooking in a fun way.",
+    "thumbnail": { "src": "images/kodi.jpg", "loading": "lazy" },
+    "modalImages": [
+      { "src": "images/modal/kodi-1.jpg", "loading": "eager", "alt": "Kodi Learns to Cook" },
+      { "src": "images/modal/kodi-2.jpg", "loading": "lazy", "alt": "Kodi Learns to Cook" },
+      { "src": "images/modal/kodi-3.jpg", "loading": "lazy", "alt": "Kodi Learns to Cook" },
+      { "src": "images/modal/kodi-4.jpg", "loading": "lazy", "alt": "Kodi Learns to Cook" }
+    ],
+    "videoId": "2hV1CsgNnDU"
+  }
+]

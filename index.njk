@@ -1,0 +1,78 @@
+---
+title: Steven Simon
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="This is my portfolio.">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <title>{{ title }}</title>
+
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet">
+
+  <noscript>
+    <link rel="stylesheet" href="css/noscript.css" type="text/css" />
+  </noscript>
+</head>
+
+<body>
+  <!-- Hero -->
+  <div id="hero">
+    <div id="fade">
+      <div class="wrapper feature">
+        <header>
+          <h1 class="rawLogo"><a href="https://srs815.github.io/portfolio">steven simon</a></h1>
+          <div class="inside-wrapper">
+            <p>Hey there! I'm a creative designer and developer, rocking a holistic approach, flexibility, and team spirit!</p>
+          </div>
+          <nav>
+            <a href="tel:3463730801" title="phone" target="_top"><i class="fa fa-phone"></i></a>
+            <a href="mailto:stevenraysimon@gmail.com" title="email" target="_top"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/steven-ray-simon" title="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="/resume" title="resume"><i class="fa fa-briefcase"></i></a>
+            <a href="https://www.instagram.com/stevensimon50" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://stevenraysimon.github.io/caricatures/" title="caricatures" target="_blank"><i class="fa fa-smile-o"></i></a>
+          </nav>
+        </header>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Rows -->
+  {% for project in projects %}
+    {% include "row.njk" %}
+    {% if not loop.last %}<hr>{% endif %}
+  {% endfor %}
+
+  <footer>
+    <div class="wrapper footer">
+      <p>Designed and developed by Steven Simon <span id="date">2019</span></p>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  {% for project in projects %}
+    {% include "modal.njk" %}
+  {% endfor %}
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/modals.js"></script>
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your GA4 measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+</body>
+</html>
