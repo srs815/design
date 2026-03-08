@@ -1,8 +1,9 @@
 module.exports = function(eleventyConfig) {
-  // Pass through static assets unchanged
+  // Copy CSS, JS, images, fonts, sounds to _site
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("sounds");
 
   return {
@@ -11,6 +12,7 @@ module.exports = function(eleventyConfig) {
       output: "_site",
       includes: "_includes",
       data: "_data"
-    }
+    },
+    pathPrefix: "/portfolio/"
   };
 };
