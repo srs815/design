@@ -20,7 +20,7 @@ $(document).ready(function () {
   pop.preload = 'auto';
 
   // Track scroll position before opening a modal
-  var scrollPositionBeforeModal = 0;
+  var scrollPositions = {};
 
   // Initialize modals
   items.forEach(function (id) {
@@ -28,13 +28,16 @@ $(document).ready(function () {
   });
 
   // Handle browser back/forward navigation
+  // popstate - restore per modal
   $(window).on('popstate', function () {
     items.forEach(function (id) {
+      if ($('#modal-' + id).is(':visible')) {
+        $(document).scrollTop(scrollPositions[id] || 0);
+      }
       $('#modal-' + id).fadeOut('fast');
       stopVideo(id);
     });
     $('body').removeClass('my-body-noscroll-class');
-    $(document).scrollTop(scrollPositionBeforeModal);
   });
 
   // ----------------------------
@@ -62,13 +65,15 @@ $(document).ready(function () {
   // Helper: close a specific modal
   // ----------------------------
   function closeModal(id) {
-    document.activeElement.blur(); // add this
+    document.activeElement.blur();
     $('#modal-' + id).fadeOut('fast');
     $('body').removeClass('my-body-noscroll-class');
     stopVideo(id);
     if (pop) pop.play();
     window.history.go(-1);
-    $(document).scrollTop(scrollPositionBeforeModal);
+    setTimeout(function() {
+      $(document).scrollTop(scrollPositions[id] || 0);
+    }, 50);
   }
 
   // ----------------------------
@@ -78,22 +83,23 @@ $(document).ready(function () {
     $('#modal-' + id).css('display', 'none');
 
     // Open
-  $('#' + id + '-cta').on('click', function () {
-    scrollPositionBeforeModal = $(document).scrollTop();
-    var $video = $('#video-' + id);
-    if ($video.length) {
-      var originalSrc = $video.data('src');
-      if (!originalSrc) {
-        $video.data('src', $video.attr('src')); // store original src once
+    $('#' + id + '-cta').on('click', function () {
+      // Open - save per modal
+      scrollPositions[id] = $(document).scrollTop();
+      var $video = $('#video-' + id);
+      if ($video.length) {
+        var originalSrc = $video.data('src');
+        if (!originalSrc) {
+          $video.data('src', $video.attr('src')); // store original src once
+        }
+        $video.attr('src', $video.data('src')); // restore on open
       }
-      $video.attr('src', $video.data('src')); // restore on open
-    }
-    $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
-    $('body').addClass('my-body-noscroll-class');
-    if (pop) pop.play();
-    window.history.pushState({}, '', '/portfolio/#modal-' + id);
-    return false;
-  });
+      $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
+      $('body').addClass('my-body-noscroll-class');
+      if (pop) pop.play();
+      window.history.pushState({}, '', '/portfolio/#modal-' + id);
+      return false;
+    });
 
     // Close (top button)
     $('#' + id + '-exit').on('click', function () {
