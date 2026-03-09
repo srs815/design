@@ -36,9 +36,8 @@ $(document).ready(function () {
     items.forEach(function (id) {
       if ($('#modal-' + id).is(':visible')) {
         $(document).scrollTop(scrollPositions[id] || 0);
+        $('#modal-' + id).fadeOut('fast');
       }
-      $('#modal-' + id).fadeOut('fast');
-      stopVideo(id);
     });
     $('body').removeClass('my-body-noscroll-class');
   });
@@ -94,9 +93,9 @@ $(document).ready(function () {
       if ($video.length) {
         var originalSrc = $video.data('src');
         if (!originalSrc) {
-          $video.data('src', $video.attr('src')); // store original src once
+          $video.data('src', $video.attr('src'));
         }
-        $video.attr('src', $video.data('src')); // restore on open
+        $video.attr('src', $video.data('src'));
       }
       $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
       $('body').addClass('my-body-noscroll-class');
