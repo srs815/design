@@ -44,15 +44,11 @@ $(document).ready(function () {
   // Helper: stop an iframe video by resetting its src
   // ----------------------------
   function stopVideo(id) {
-  var $video = $('#video-' + id);
-  if ($video.length) {
-    var src = $video.attr('src');
-    $video.attr('src', '');
-    setTimeout(function() {
-      $video.attr('src', src);
-    }, 100);
+    var $video = $('#video-' + id);
+    if ($video.length) {
+      $video.attr('src', 'about:blank');
+    }
   }
-}
 
   // ----------------------------
   // Helper: close a specific modal
@@ -74,14 +70,22 @@ $(document).ready(function () {
     $('#modal-' + id).css('display', 'none');
 
     // Open
-    $('#' + id + '-cta').on('click', function () {
-      scrollPositionBeforeModal = $(document).scrollTop();
-      $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
-      $('body').addClass('my-body-noscroll-class');
-      if (pop) pop.play();
-      window.history.pushState({}, '', '/portfolio/#modal-' + id);
-      return false;
-    });
+  $('#' + id + '-cta').on('click', function () {
+    scrollPositionBeforeModal = $(document).scrollTop();
+    var $video = $('#video-' + id);
+    if ($video.length) {
+      var originalSrc = $video.data('src');
+      if (!originalSrc) {
+        $video.data('src', $video.attr('src')); // store original src once
+      }
+      $video.attr('src', $video.data('src')); // restore on open
+    }
+    $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
+    $('body').addClass('my-body-noscroll-class');
+    if (pop) pop.play();
+    window.history.pushState({}, '', '/portfolio/#modal-' + id);
+    return false;
+  });
 
     // Close (top button)
     $('#' + id + '-exit').on('click', function () {
