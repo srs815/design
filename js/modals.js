@@ -7,6 +7,14 @@ $(document).ready(function () {
   var items = [];
   storeid();
 
+  // Store original video srcs before anything blanks them
+  items.forEach(function (id) {
+    var $video = $('#video-' + id);
+    if ($video.length) {
+      $video.data('src', $video.attr('src'));
+    }
+  });
+
   // Create audio element programmatically
   var pop = new Audio('sounds/smallPop.wav');
   pop.preload = 'auto';
