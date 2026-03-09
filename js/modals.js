@@ -44,11 +44,15 @@ $(document).ready(function () {
   // Helper: stop an iframe video by resetting its src
   // ----------------------------
   function stopVideo(id) {
-    var $video = $('#video-' + id);
-    if ($video.length) {
-      $video.attr('src', $video.attr('src'));
-    }
+  var $video = $('#video-' + id);
+  if ($video.length) {
+    var src = $video.attr('src');
+    $video.attr('src', '');
+    setTimeout(function() {
+      $video.attr('src', src);
+    }, 100);
   }
+}
 
   // ----------------------------
   // Helper: close a specific modal
