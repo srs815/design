@@ -58,6 +58,7 @@ $(document).ready(function () {
   // Helper: close a specific modal
   // ----------------------------
   function closeModal(id) {
+    document.activeElement.blur(); // add this
     $('#modal-' + id).fadeOut('fast');
     $('body').removeClass('my-body-noscroll-class');
     stopVideo(id);
