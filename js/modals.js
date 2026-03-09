@@ -19,8 +19,11 @@ $(document).ready(function () {
   var pop = new Audio('sounds/smallPop.wav');
   pop.preload = 'auto';
 
-  // Track scroll position before opening a modal
+  // Track scroll position per modal
   var scrollPositions = {};
+
+  // Flag to prevent popstate interference when intentionally closing
+  var isClosingModal = false;
 
   // Initialize modals
   items.forEach(function (id) {
@@ -28,8 +31,8 @@ $(document).ready(function () {
   });
 
   // Handle browser back/forward navigation
-  // popstate - restore per modal
   $(window).on('popstate', function () {
+    if (isClosingModal) return;
     items.forEach(function (id) {
       if ($('#modal-' + id).is(':visible')) {
         $(document).scrollTop(scrollPositions[id] || 0);
@@ -52,7 +55,7 @@ $(document).ready(function () {
   }
 
   // ----------------------------
-  // Helper: stop an iframe video by resetting its src
+  // Helper: stop an iframe video by setting src to about:blank
   // ----------------------------
   function stopVideo(id) {
     var $video = $('#video-' + id);
@@ -66,13 +69,15 @@ $(document).ready(function () {
   // ----------------------------
   function closeModal(id) {
     document.activeElement.blur();
+    isClosingModal = true;
     $('#modal-' + id).fadeOut('fast');
     $('body').removeClass('my-body-noscroll-class');
     stopVideo(id);
     if (pop) pop.play();
     window.history.go(-1);
-    setTimeout(function() {
+    setTimeout(function () {
       $(document).scrollTop(scrollPositions[id] || 0);
+      isClosingModal = false;
     }, 50);
   }
 
@@ -84,7 +89,6 @@ $(document).ready(function () {
 
     // Open
     $('#' + id + '-cta').on('click', function () {
-      // Open - save per modal
       scrollPositions[id] = $(document).scrollTop();
       var $video = $('#video-' + id);
       if ($video.length) {
