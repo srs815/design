@@ -2,7 +2,7 @@
   {
     "id": "smokehouse",
     "title": "Smokehouse Bar-B-Que",
-    "description": "Smokehouse Bar-B-Que is a full brand identity system created for a Texas barbecue restaurant. The project explores how a traditional food business can be positioned through a bold, modern visual identity while honoring its Texas heritage. Deliverables include logo design, packaging, stationery, print advertising, a promotional brand film, and a responsive website homepage, all unified through a cohesive brand system designed for a competitive food market.",
+    "description": "Smokehouse Bar-B-Que is a full brand identity system for a Texas barbecue restaurant, blending bold modern design with regional heritage. The project includes logo design, packaging, stationery, print advertising, a brand film, and a responsive website homepage unified by a cohesive visual system.",
     "thumbnail": { "src": "images/smokehouse.jpeg", "loading": "eager" },
     "modalImages": [
       { "src": "images/modal/smokehouse-1.jpg", "loading": "eager", "alt": "Stationery Design" },
@@ -14,11 +14,11 @@
   {
     "id": "blackRhino",
     "title": "Black Rhino Foundation",
-    "description": "Black Rhino Foundation is a conceptual nonprofit identity created to raise awareness for endangered black rhinoceros conservation. The project focuses on building trust and emotional resonance through a refined visual identity system, including logo design, stationery, and awareness posters designed to support advocacy and fundraising efforts.",
+    "description": "Black Rhino Foundation is a conceptual nonprofit identity for endangered black rhinoceros conservation. The project builds trust and emotional impact through a refined visual identity system including logo design, stationery, and awareness posters supporting advocacy and fundraising.",
     "thumbnail": { "src": "images/blackRhino.jpeg", "loading": "eager" },
     "modalImages": [
-      { "src": "images/modal/rhino-1.jpg", "loading": "eager", "alt": "Stationery Design" },
-      { "src": "images/modal/rhino-2.jpg", "loading": "lazy", "alt": "Stationery Design" }
+      { "src": "images/modal/blackRhino-1.jpg", "loading": "eager", "alt": "Stationery Design" },
+      { "src": "images/modal/blackRhino-2.jpg", "loading": "lazy", "alt": "Stationery Design" }
     ]
   },
 

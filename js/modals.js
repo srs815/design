@@ -91,7 +91,7 @@ $(document).ready(function () {
       $('#modal-' + id).css('z-index', '1000').fadeIn('fast').scrollTop(0);
       $('body').addClass('my-body-noscroll-class');
       if (pop) pop.play();
-      window.history.pushState({}, '', '/portfolio/#modal-' + id);
+      window.history.pushState({}, '', '/design/#modal-' + id);
       return false;
     });
 
