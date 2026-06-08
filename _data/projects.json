@@ -6,7 +6,7 @@
     "thumbnail": { "src": "images/smokehouse.jpeg", "loading": "eager" },
     "modalImages": [
       { "src": "images/modal/smokehouse-1.jpg", "loading": "eager", "alt": "Stationery Design" },
-      { "src": "images/modal/smokehouse-2.jpg", "loading": "lazy", "alt": "Packaging Design" }
+      { "src": "images/modal/smokehouse-2.jpg", "loading": "eager", "alt": "Packaging Design" }
     ],
     "videoId": "BXyMOUFH2cM"
   },
@@ -18,7 +18,7 @@
     "thumbnail": { "src": "images/blackRhino.jpeg", "loading": "eager" },
     "modalImages": [
       { "src": "images/modal/blackRhino-1.jpg", "loading": "eager", "alt": "Stationery Design" },
-      { "src": "images/modal/blackRhino-2.jpg", "loading": "lazy", "alt": "Stationery Design" }
+      { "src": "images/modal/blackRhino-2.jpg", "loading": "eager", "alt": "Stationery Design" }
     ]
   },
 
